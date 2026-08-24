@@ -49,7 +49,7 @@ export default function Hero() {
               <a href="https://github.com/danielgrasshoff" target="_blank" rel="noopener noreferrer" className="hero__social-link" aria-label="GitHub">
                 <GithubIcon size={20} />
               </a>
-              <a href="mailto:daniel.grasshoff@icloud.com" className="hero__social-link" aria-label="Email">
+              <a href="mailto:website@danielgrasshoff.com" className="hero__social-link" aria-label="Email">
                 <Mail size={20} />
               </a>
             </div>

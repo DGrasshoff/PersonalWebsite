@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="footer__info">
           <p className="footer__copyright">
             © {new Date().getFullYear()} Daniel Graßhoff.<br />
-            Designed in Berlin.
+            Designed in Berlin. • Last updated: {__BUILD_DATE__}
           </p>
         </div>
 
@@ -20,7 +20,7 @@ export default function Footer() {
           <a href="https://github.com/danielgrasshoff" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
             <GithubIcon size={20} />
           </a>
-          <a href="mailto:daniel.grasshoff@icloud.com" aria-label="Email">
+          <a href="mailto:website@danielgrasshoff.com" aria-label="Email">
             <Mail size={20} strokeWidth={1.5} />
           </a>
         </div>

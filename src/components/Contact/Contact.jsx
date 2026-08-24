@@ -27,7 +27,7 @@ export default function Contact() {
             <a href="https://github.com/danielgrasshoff" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
               <GithubIcon size={24} />
             </a>
-            <a href="mailto:daniel.grasshoff@icloud.com" aria-label="Email">
+            <a href="mailto:website@danielgrasshoff.com" aria-label="Email">
               <Mail size={24} strokeWidth={1.5} />
             </a>
           </div>

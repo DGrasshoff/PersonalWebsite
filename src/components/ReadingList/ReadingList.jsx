@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { BookOpen } from 'lucide-react';
 import './ReadingList.css';
+import booksText from '../../../books.txt?raw';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -14,29 +15,21 @@ export default function ReadingList() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('/books.txt')
-      .then(res => res.text())
-      .then(text => {
-        const lines = text.split('\n');
-        const parsedBooks = [];
-        let i = 0;
-        while (i < lines.length) {
-          const title = lines[i]?.trim();
-          if (!title) {
-            i++;
-            continue;
-          }
-          const comment = lines[i + 1]?.trim() || '';
-          parsedBooks.push({ title, description: comment });
-          i += 2;
-        }
-        setBooks(parsedBooks);
-        setLoading(false);
-      })
-      .catch(err => {
-        console.error('Failed to load books:', err);
-        setLoading(false);
-      });
+    const lines = booksText.split('\n');
+    const parsedBooks = [];
+    let i = 0;
+    while (i < lines.length) {
+      const title = lines[i]?.trim();
+      if (!title) {
+        i++;
+        continue;
+      }
+      const comment = lines[i + 1]?.trim() || '';
+      parsedBooks.push({ title, description: comment });
+      i += 2;
+    }
+    setBooks(parsedBooks);
+    setLoading(false);
   }, []);
 
   return (
