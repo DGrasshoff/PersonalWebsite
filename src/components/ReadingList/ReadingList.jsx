@@ -1,0 +1,78 @@
+import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { BookOpen } from 'lucide-react';
+import './ReadingList.css';
+
+const fadeInUp = {
+  initial: { opacity: 0, y: 30 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, margin: '-80px' },
+};
+
+export default function ReadingList() {
+  const [books, setBooks] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch('/books.txt')
+      .then(res => res.text())
+      .then(text => {
+        const lines = text.split('\n');
+        const parsedBooks = [];
+        let i = 0;
+        while (i < lines.length) {
+          const title = lines[i]?.trim();
+          if (!title) {
+            i++;
+            continue;
+          }
+          const comment = lines[i + 1]?.trim() || '';
+          parsedBooks.push({ title, description: comment });
+          i += 2;
+        }
+        setBooks(parsedBooks);
+        setLoading(false);
+      })
+      .catch(err => {
+        console.error('Failed to load books:', err);
+        setLoading(false);
+      });
+  }, []);
+
+  return (
+    <section className="section reading" id="reading" style={{ minHeight: '100vh', paddingTop: '120px' }}>
+      <div className="container">
+        <motion.div className="section-header" {...fadeInUp} transition={{ duration: 0.6 }}>
+          <span className="section-label">Reading List</span>
+          <h2 className="section-title">On My Bookshelf</h2>
+          <p style={{ marginTop: '16px', fontSize: '1.1rem', color: 'var(--text-secondary)', maxWidth: '600px', lineHeight: '1.6' }}>
+            These are the books I've read lately. I wrote a short impression for each one.
+          </p>
+        </motion.div>
+
+        {loading ? (
+          <p>Loading books...</p>
+        ) : (
+          <div className="reading__list">
+            {books.map((book, index) => (
+              <motion.div
+                key={index}
+                className="reading__item"
+                {...fadeInUp}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+              >
+                <div className="reading__icon">
+                  <BookOpen size={24} strokeWidth={1.5} />
+                </div>
+                <div className="reading__content">
+                  <h3 className="reading__title">{book.title}</h3>
+                  <p className="reading__description">{book.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        )}
+      </div>
+    </section>
+  );
+}

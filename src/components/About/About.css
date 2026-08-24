@@ -1,0 +1,134 @@
+.about__layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.about__text-content {
+  max-width: 520px;
+}
+
+.about__text {
+  margin-bottom: 24px;
+}
+
+.about__text strong {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.about__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-tertiary);
+  font-size: 0.95rem;
+}
+
+.about__location {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.about__languages {
+  font-family: var(--font-mono);
+  letter-spacing: 2px;
+}
+
+.about__gallery {
+  position: relative;
+  height: 600px;
+  width: 100%;
+}
+
+.about__photo-wrapper {
+  position: absolute;
+  background: var(--bg-secondary);
+  padding: 10px 10px 40px 10px;
+  border-radius: 2px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0,0,0,0.03);
+  transition: transform 0.3s ease;
+}
+
+.about__photo-wrapper:hover {
+  z-index: 10;
+  transform: scale(1.05) rotate(0deg) !important;
+}
+
+.about__photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+/* Polaroids positioning */
+.about__photo-1 {
+  width: 250px;
+  height: 310px;
+  top: 0;
+  left: 10px;
+  z-index: 1;
+}
+
+.about__photo-2 {
+  width: 270px;
+  height: 330px;
+  top: 100px;
+  right: 0;
+  z-index: 2;
+}
+
+.about__photo-3 {
+  width: 240px;
+  height: 300px;
+  bottom: 20px;
+  left: 40px;
+  z-index: 3;
+}
+
+@media (max-width: 900px) {
+  .about__layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .about__text-content {
+    max-width: 100%;
+  }
+
+  .about__gallery {
+    height: 500px;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 500px) {
+  .about__gallery {
+    height: 400px;
+  }
+
+  .about__photo-1 {
+    width: 200px;
+    height: 250px;
+  }
+  
+  .about__photo-2 {
+    width: 220px;
+    height: 270px;
+    top: 100px;
+  }
+  
+  .about__photo-3 {
+    width: 180px;
+    height: 220px;
+    left: 20px;
+  }
+}
