@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { BookOpen } from 'lucide-react';
 import './ReadingList.css';
 import booksText from '../../../books.txt?raw';
 
@@ -24,9 +23,10 @@ export default function ReadingList() {
         i++;
         continue;
       }
-      const comment = lines[i + 1]?.trim() || '';
-      parsedBooks.push({ title, description: comment });
-      i += 2;
+      const author = lines[i + 1]?.trim() || '';
+      const comment = lines[i + 2]?.trim() || '';
+      parsedBooks.push({ title, author, description: comment });
+      i += 3;
     }
     setBooks(parsedBooks);
     setLoading(false);
@@ -54,11 +54,9 @@ export default function ReadingList() {
                 {...fadeInUp}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <div className="reading__icon">
-                  <BookOpen size={24} strokeWidth={1.5} />
-                </div>
                 <div className="reading__content">
                   <h3 className="reading__title">{book.title}</h3>
+                  <p className="reading__author">{book.author}</p>
                   <p className="reading__description">{book.description}</p>
                 </div>
               </motion.div>
