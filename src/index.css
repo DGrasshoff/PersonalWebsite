@@ -2,27 +2,27 @@
 
 /* ===== Design Tokens ===== */
 :root {
-  /* Warm Light Theme (Default now) */
-  --bg-primary: #f9f8f6;
+  /* Cool Light Theme (Matches grey/blue photo) */
+  --bg-primary: #f8fafc;
   --bg-secondary: #ffffff;
-  --bg-tertiary: #f0ebe1;
+  --bg-tertiary: #e2e8f0;
   --bg-card: #ffffff;
   
-  --text-primary: #2d2a26;
-  --text-secondary: #5c5853;
-  --text-tertiary: #8b8680;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-tertiary: #64748b;
   
-  --accent-primary: #5a6b5d; /* Sage green */
-  --accent-secondary: #829385;
+  --accent-primary: #475569; /* Slate grey */
+  --accent-secondary: #64748b;
   
-  --border-color: rgba(45, 42, 38, 0.1);
-  --border-hover: rgba(45, 42, 38, 0.2);
+  --border-color: rgba(15, 23, 42, 0.1);
+  --border-hover: rgba(15, 23, 42, 0.2);
 
-  --nav-bg: rgba(249, 248, 246, 0.95);
+  --nav-bg: rgba(248, 250, 252, 0.95);
   --nav-blur: 10px;
 
-  --shadow-sm: 0 2px 8px rgba(45, 42, 38, 0.04);
-  --shadow-md: 0 4px 16px rgba(45, 42, 38, 0.06);
+  --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.04);
+  --shadow-md: 0 4px 16px rgba(15, 23, 42, 0.06);
 
   --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-serif: 'DM Serif Display', Georgia, serif;

@@ -8,10 +8,33 @@
 
 .hero__container {
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
 }
 
 .hero__content {
-  max-width: 800px;
+  max-width: 600px;
+  flex: 1;
+}
+
+.hero__image-wrapper {
+  flex: 1;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__image {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  object-fit: cover;
+  border: 1px solid var(--border-color);
 }
 
 .hero__greeting {
@@ -99,13 +122,25 @@
 }
 
 @media (max-width: 768px) {
+  .hero__container {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 32px;
+  }
+  
   .hero__description {
     font-size: 1.05rem;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   .hero__actions {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 24px;
+  }
+  
+  .hero__socials {
+    justify-content: center;
   }
 }

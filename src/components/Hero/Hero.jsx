@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { ArrowDown, Mail } from 'lucide-react';
 import { LinkedinIcon, GithubIcon } from '../icons';
+import profileImg from '../../assets/BW_6916.jpg';
 import './Hero.css';
 
 export default function Hero() {
@@ -58,6 +59,15 @@ export default function Hero() {
               More about me
             </a>
           </motion.div>
+        </motion.div>
+
+        <motion.div 
+          className="hero__image-wrapper"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+        >
+          <img src={profileImg} alt="Daniel Graßhoff" className="hero__image" />
         </motion.div>
       </div>
 
