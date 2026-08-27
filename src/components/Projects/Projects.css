@@ -56,6 +56,20 @@
 .projects__title {
   font-size: 1.4rem;
   margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.projects__link {
+  color: var(--text-tertiary);
+  transition: color var(--transition-fast);
+  display: flex;
+  align-items: center;
+}
+
+.projects__link:hover {
+  color: var(--accent-primary);
 }
 
 .projects__subtitle {

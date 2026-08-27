@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { ExternalLink } from 'lucide-react';
 import './Projects.css';
 
 const projects = [
@@ -6,19 +7,22 @@ const projects = [
     title: 'GYPT Silver Medal',
     subtitle: 'German Young Physicists\' Tournament — 3rd Place Nationals (2024)',
     description: 'Investigated resonance absorption and the Zeeman effect by observing the shadow of a salted flame illuminated by a sodium vapor lamp. Developed a mathematical model for light absorption and conducted experiments at TU Berlin.',
-    image: '/projects/Quantum Light Dimmer.png'
+    image: '/projects/Quantum Light Dimmer.png',
+    link: 'https://www.gypt.org/ueber_uns/siegerinnen.html'
   },
   {
     title: 'INVENT a CHIP — 1st Place',
     subtitle: 'National Microchip Design Competition (2023)',
     description: 'Built a photovoltaic solar tracker using a self-programmed FPGA chip in VHDL. Implemented real-time data monitoring and control systems, winning 1st place in the national competition organized by the VDE.',
-    image: '/projects/IAC.png'
+    image: '/projects/IAC.png',
+    link: 'https://lnkd.in/p/d2_KRiPy'
   },
   {
     title: 'GYPT Bronze Medal',
     subtitle: 'German Young Physicists\' Tournament — 4th Place Nationals (2023)',
     description: 'Investigated a magnetic-mechanical oscillator consisting of two coupled leaf springs. Modeled the system using coupled differential equations and verified the theoretical predictions through experimental measurements and Fourier analysis.',
-    image: '/projects/MMO.jpeg'
+    image: '/projects/MMO.jpeg',
+    link: 'https://www.gypt.org/ueber_uns/siegerinnen.html'
   },
 ];
 
@@ -46,7 +50,14 @@ export default function Projects() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
               <div className="projects__item-content">
-                <h3 className="projects__title">{project.title}</h3>
+                <h3 className="projects__title">
+                  {project.title}
+                  {project.link && (
+                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="projects__link" aria-label="Project reference">
+                      <ExternalLink size={20} strokeWidth={2} />
+                    </a>
+                  )}
+                </h3>
                 <p className="projects__subtitle">{project.subtitle}</p>
                 <p className="projects__description">{project.description}</p>
               </div>
