@@ -5,19 +5,19 @@ const projects = [
   {
     title: 'GYPT Silver Medal',
     subtitle: 'German Young Physicists\' Tournament — 3rd Place Nationals (2024)',
-    description: 'Conducted an experimental investigation of flame shadow imaging and the Zeeman effect in resonance absorption. Analyzed spectral data and presented findings at the national stage.',
+    description: 'Investigated resonance absorption and the Zeeman effect by observing the shadow of a salted flame illuminated by a sodium vapor lamp. Developed a mathematical model for light absorption and conducted experiments at TU Berlin.',
     image: '/projects/Quantum Light Dimmer.png'
   },
   {
     title: 'INVENT a CHIP — 1st Place',
     subtitle: 'National Microchip Design Competition (2023)',
-    description: 'Designed FPGA-based hardware logic in VHDL for a solar tracker control system. Won 1st place in the national competition organized by the German Electrical Engineering Association (VDE) and BMBF.',
+    description: 'Built a photovoltaic solar tracker using a self-programmed FPGA chip in VHDL. Implemented real-time data monitoring and control systems, winning 1st place in the national competition organized by the VDE.',
     image: '/projects/IAC.png'
   },
   {
     title: 'GYPT Bronze Medal',
     subtitle: 'German Young Physicists\' Tournament — 4th Place Nationals (2023)',
-    description: 'Explored energy transfer dynamics, normal modes, and resonance phenomena through precise measurements and theoretical modeling of magnetically coupled spring pendulums.',
+    description: 'Investigated a magnetic-mechanical oscillator consisting of two coupled leaf springs. Modeled the system using coupled differential equations and verified the theoretical predictions through experimental measurements and Fourier analysis.',
     image: '/projects/MMO.jpeg'
   },
 ];

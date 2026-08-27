@@ -33,8 +33,7 @@ export default function Hero() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            Currently spending a semester abroad at UC Santa Barbara. When I'm not studying 
-            physics, you can usually find me hiking, climbing mountains, or spending time with my Chihuahua, Leo.
+            Physics student at TU Berlin, currently spending a semester abroad at UC Santa Barbara.
           </motion.p>
 
           <motion.div

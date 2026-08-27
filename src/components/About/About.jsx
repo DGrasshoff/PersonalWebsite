@@ -20,28 +20,15 @@ export default function About() {
         <div className="about__layout">
           <div className="about__text-content">
             <motion.p className="about__text" {...fadeInUp} transition={{ duration: 0.6, delay: 0.1 }}>
-              I grew up in Berlin and developed a deep 
-              curiosity for how things work. Whether it's understanding the fundamental laws 
-              of physics or exploring the natural world, I've always loved figuring out how things fit together.
+              I'm a physics student from Berlin. I've always been fascinated by how a few fundamental laws can explain so much of the world around us. But my real interest lies in application—taking those theoretical principles and using them to build practical, technical solutions.
             </motion.p>
             
             <motion.p className="about__text" {...fadeInUp} transition={{ duration: 0.6, delay: 0.2 }}>
-              Right now, I'm taking a semester abroad at the <strong>University of California, 
-              Santa Barbara</strong>, soaking up the California sun while continuing my physics 
-              studies. Back home, I'm a Physics B.Sc. student at <strong>TU Berlin</strong>.
+              I'm currently studying Physics at <strong>TU Berlin</strong>, but my favorite part of the field is getting hands-on outside the classroom. Whether it's winning the <em>INVENT a CHIP</em> competition, building AI tools as a software developer, or currently working on battery and solar tech at <strong>Bosch</strong>, I love turning theory into practice. This Fall (2026), I'm heading to <strong>UC Santa Barbara</strong> for a semester abroad, where I'll have the exciting opportunity to contribute to the milliQan Experiment through a research course (PHYS 199) with Prof. David Stuart. Long-term, I'm aiming for a career in research—and eventually a PhD—somewhere between physics and electrical engineering.
             </motion.p>
 
             <motion.p className="about__text" {...fadeInUp} transition={{ duration: 0.6, delay: 0.3 }}>
-              When I step away from the lab, you'll probably find me outside. 
-              I love hiking, exploring new places, and taking photos along the way. I also 
-              spend a lot of time with my Chihuahua, Leo.
-            </motion.p>
-
-            <motion.p className="about__text" {...fadeInUp} transition={{ duration: 0.6, delay: 0.4 }}>
-              I'm trilingual—growing up speaking both German and Russian at home—and English 
-              has always been a huge part of my life. I've been lucky enough to work on some 
-              amazing projects, from solar panel simulations at Bosch to winning national chip 
-              design competitions, but what really drives me is the joy of learning.
+              When I'm not studying or working, I volunteer at a local senior home helping out with tech support and events. Otherwise, you'll probably find me hiking, exploring the outdoors, or trying to keep up with my energetic Chihuahua, Leo.
             </motion.p>
 
             <motion.div className="about__meta" {...fadeInUp} transition={{ duration: 0.6, delay: 0.5 }}>
