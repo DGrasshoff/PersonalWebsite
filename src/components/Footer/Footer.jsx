@@ -17,7 +17,7 @@ export default function Footer() {
           <a href="https://linkedin.com/in/daniel-grasshoff-1731b1298" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <LinkedinIcon size={20} />
           </a>
-          <a href="https://github.com/danielgrasshoff" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <a href="https://github.com/DGrasshoff" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
             <GithubIcon size={20} />
           </a>
           <a href="mailto:website@danielgrasshoff.com" aria-label="Email">
